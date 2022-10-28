@@ -327,7 +327,7 @@ local BoxESP = function ()
                     --print("this is a dead test")
 
                 else
-                    local UserFolder = game:GetService"Players"[v.Name].Character
+                    local UserFolder = game:GetService"Players":FindFirstChild(v.Name).Character
 
                     if UserFolder ~= nil and UserFolder:FindFirstChild("Torso") and UserFolder:FindFirstChildOfClass"Humanoid".Health > 0 then
     
@@ -448,7 +448,7 @@ local BoxESP = function ()
 
                     if UserFolder ~= nil and UserFolder:FindFirstChild("Torso") and UserFolder.Humanoid.Health > 0 then
     
-                        print("this is a logic test")
+                        --print("this is a logic test")
                         --print(UserFolder.Torso.Position)
                         local Vector, onScreen = camera:worldToViewportPoint(UserFolder.HumanoidRootPart.Position)
                         local RootPart = UserFolder.HumanoidRootPart
